@@ -9,4 +9,4 @@ compile:
 	typst compile main.typ out/main.pdf
 
 open:
-	sioyek out/main.pdf
+	sioyek out/watch.pdf
