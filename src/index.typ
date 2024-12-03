@@ -1,4 +1,4 @@
-#{ include "/src/meta/bia.typ" }
+#{ include "/src/meta/cover.typ" }
 #pagebreak()
 
 #{ include "/src/meta/outline.typ" }
