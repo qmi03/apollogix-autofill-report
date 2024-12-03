@@ -21,8 +21,5 @@
     it
     v(.5em)
 }
-#set par(justify: true)
-#import "/src/meta/latex.typ"
-#show "LaTeX": latex.LaTeX
 
-#{ include "/src/contents/index.typ" }
+#{ include "/src/index.typ" }
