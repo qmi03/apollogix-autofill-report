@@ -49,9 +49,13 @@ Nhược điểm:
 - Yêu cầu tập dữ liệu được gắn nhãn chất lượng cao, chi phí gắn nhãn lớn.
 - Hiệu quả của mô hình phụ thuộc mạnh vào chất lượng dữ liệu và đặc trưng.
 - Mô hình có thể gặp khó khăn khi xử lý ngôn ngữ không chính thức hoặc lỗi chính
-  tả (tốn kém việc tiền xử lý sửa lỗi chính tả)
+  tả (tốn kém việc tiền xử lý sửa lỗi chính tả).
 
 Tham khảo: https://www.ibm.com/topics/named-entity-recognition
 
-Ta có thể loại thẳng tay hướng tiếp cận này vì nó lượng dữ liệu huấn luyện quá
-ít (khoảng 40 mẫu) và chi phí dãn nhãn lớn đối với 1 thực tập sinh.
+Ta có thể loại thẳng tay hướng tiếp cận này vì:
+- Bộ dữ liệu cung cấp cho công việc huấn luyện quá ít ỏi (khoảng 40 mẫu).
+- Việc dán nhãn phải làm thủ công, đòi hỏi người có chuyên môn hoặc quen với việc
+  nhập mẫu (ví dụ: người bên nhánh vận hành của công ty). Vì vậy chi phí dãn nhãn
+  (thời gian, nhân lực) là quá lớn đối với 1 thực tập sinh trong 1 kỳ thực tập nên
+  không thể xây dựng một mô hình đủ ý nghĩa.
