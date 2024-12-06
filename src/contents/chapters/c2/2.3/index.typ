@@ -16,5 +16,5 @@
     ảnh/... mà không cần có bước OCR.
 
 #set heading(offset: 3)
-#{ include "./2.3/2.3.1.typ" }
-#{ include "./2.3/2.3.2.typ" }
+#{ include "./2.3.1a.typ" }
+#{ include "./2.3.1b.typ" }

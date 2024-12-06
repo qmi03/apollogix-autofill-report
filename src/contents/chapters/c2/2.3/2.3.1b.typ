@@ -41,16 +41,17 @@ năng gọi hàm. Gọi hàm gồm các bước trừu tượng như sau:
 pháp huấn luyện mô hình*
 
 Nhược điểm:
-- Vì chúng ta sẽ không huấn luyện mô hình thêm nên cũng không thể tăng độ chính
-  xác theo thời gian khi kích thước bộ dữ liệu tăng lên sau một thời gian sử dụng.
-- Không xác định được cụ thể hiệu năng của mô hình.
+- Độ chính xác hội tụ sớm sau một thời gian ngắn sử dụng: Vì chúng ta sẽ không
+  huấn luyện mô hình, nên cũng không thể tăng độ chính xác theo thời gian khi kích
+  thước bộ dữ liệu tăng lên.
 Ưu điểm:
-- RAG sử dụng các mô hình ngôn ngữ lớn (LLMs) đã được huấn luyện trên kho dữ liệu
-  khổng lồ, không yêu cầu một tập dữ liệu gắn nhãn cụ thể.
+- Không cần nghĩ đến việc huấn luyện: RAG sử dụng các mô hình ngôn ngữ lớn (LLMs)
+  đã được huấn luyện trên kho dữ liệu khổng lồ, không yêu cầu một tập dữ liệu gắn
+  nhãn cụ thể.
 - Linh hoạt yêu cầu bài toán: Vì các LLM được huấn luyện dựa trên nhiều ngữ cảnh
   khác nhau nên có thể thích ứng được với nhiều loại yêu cầu.
 - Dễ hiện thực: Không cần phải xây dựng chuỗi huấn luyện.
-- Nhược điểm không thể tăng độ chính xác theo thời gian có thể được bỏ qua nhờ các
-  kĩ thuật:
+- Có thể dễ dàng khắc phục nhược điểm: Không thể tăng độ chính xác theo thời gian
+  có thể được bỏ qua nhờ các kĩ thuật:
   - Việc viết lời gợi (prompting) hay hơn
   - Viết lời gợi kèm theo ví dụ (khoảng 2-5 ví dụ): Few-shot Prompting
