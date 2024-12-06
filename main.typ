@@ -21,5 +21,6 @@
   it
   v(.5em)
 }
+#set enum(numbering: "1.a.")
 
 #{ include "/src/index.typ" }

@@ -1,7 +1,6 @@
-= Nhận dạng thực thể (NER):
+= Huấn luyện mô hình NER hoặc fine-tune mô hình có sẵn:
 
 Để hiện thực hóa giải pháp NER, cần thực hiện các bước sau:
-#set enum(numbering: "1.a.")
 + Thu thập dữ liệu: Thu thập tập dữ liệu có chứa các văn bản đã được gắn nhãn thực
   thể. Việc gắn nhãn có thể thực hiện thủ công hoặc bằng các công cụ tự động hóa.
   Đảm bảo dữ liệu đa dạng và đại diện tốt cho bài toán.
@@ -41,10 +40,14 @@ Nhược điểm:
 
 Tham khảo: https://www.ibm.com/topics/named-entity-recognition
 
-Ta có thể loại thẳng tay hướng tiếp cận này vì:
+Phân tích độ phù hợp của cách tiếp cận này với bài toán:
 - Bộ dữ liệu cung cấp cho công việc huấn luyện quá ít ỏi (khoảng 40 mẫu).
 - Việc dán nhãn phải làm thủ công, đòi hỏi người có chuyên môn hoặc quen với việc
   nhập mẫu (ví dụ: người bên nhánh vận hành của công ty). Nghĩa là chi phí dãn
   nhãn (thời gian, nhân lực) là quá lớn đối với 1 thực tập sinh trong 1 kỳ thực
   tập.
 Vì vậy phương pháp này là không khả thi.
+
+Tương tự, ta không cần phải đi sâu vào các bước thực hiện fine-tuning, vì nó
+cũng sẽ yêu cầu một lượng lớn dữ liệu huấn luyện và không khả thi trong bối cảnh
+hiện tại.
