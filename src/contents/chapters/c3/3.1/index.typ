@@ -5,3 +5,4 @@ chain". Đầu tiên ta lựa chọn model
 #{ include "./3.1.1.typ" }
 #{ include "./3.1.2.typ" }
 #{ include "./3.1.3.typ" }
+#{ include "./3.1.4.typ" }
