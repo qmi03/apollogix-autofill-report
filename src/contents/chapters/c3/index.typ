@@ -1,2 +1,3 @@
 = Hiện thực
-#{ include "./3.1.typ" }
+#set heading(offset: 1)
+#{ include "./3.1/index.typ" }
