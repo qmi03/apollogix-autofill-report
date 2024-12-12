@@ -38,7 +38,14 @@ Nhược điểm:
 - Mô hình có thể gặp khó khăn khi xử lý ngôn ngữ không chính thức hoặc lỗi chính
   tả (tốn kém việc tiền xử lý sửa lỗi chính tả).
 
-Tham khảo: https://www.ibm.com/topics/named-entity-recognition
+#figure(
+  image("/static/images/labeling.png"), caption: [Minh họa công tác dãn nhãn dữ liệu],
+)
+
+Tham khảo:
+
+https://www.ibm.com/topics/named-entity-recognition
+https://medium.com/data-science-in-your-pocket/named-entity-recognition-ner-using-conditional-random-fields-in-nlp-3660df22e95c
 
 Phân tích độ phù hợp của cách tiếp cận này với bài toán:
 - Bộ dữ liệu cung cấp cho công việc huấn luyện quá ít ỏi (khoảng 40 mẫu).
