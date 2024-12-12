@@ -11,16 +11,19 @@ Tuy nhiên, vì mỗi nhà cung cấp có một cấu trúc riêng về API, gi�
 cấp là n. Ta phải thực hiện quy trình trên với độ phức tạp O(n). Ta có thể sử
 dụng thư viện (thư viện) Langchain để giúp đưa bài toán này về O(1).
 
-+ Langchain và Python\ (tác giả sử dụng Python phiên bản 3.12 và Langchain phiên
-  bản 0.3) a. Giới thiệu về Langchain:\ Langchain là một framework giúp nhà phát
-  triển có thể nhanh chóng tạo ra mô hình học tăng cường một cách nhanh chóng bằng
-  cách chuẩn hóa quy trình tạo kiến trúc học tăng cường.\ Bên cạnh đó, Langchain
-  đóng gói và trừu tượng hóa bước gọi API đến phần lớn các nhà cung cấp lớn trên
-  thị trường. Vì thế, người dùng chỉ cần xây dựng kiến trúc và yêu cầu Langchain
-  gọi dịch vụ. Nhờ đó mà nhà phát triển kiến trúc học tăng cường có thể thử nghiệm
-  trên nhiều loại mô hình ngôn ngữ lớn khác nhau.
-  + Python\ Langchain được viết dựa trên Python nên ta sẽ sử dụng ngôn ngữ Python
-  cho dự án này.
+=== Langchain:
+Langchain là một framework giúp nhà phát triển có thể nhanh chóng tạo ra mô hình
+học tăng cường một cách nhanh chóng bằng cách chuẩn hóa quy trình tạo kiến trúc
+học tăng cường.
+
+Bên cạnh đó, Langchain đóng gói và trừu tượng hóa bước gọi API đến phần lớn các
+nhà cung cấp lớn trên thị trường. Vì thế, người dùng chỉ cần xây dựng kiến trúc
+và yêu cầu Langchain gọi dịch vụ. Nhờ đó mà nhà phát triển kiến trúc học tăng
+cường có thể thử nghiệm trên nhiều loại mô hình ngôn ngữ lớn khác nhau.
+
+=== Python
+Langchain được viết dựa trên Python nên ta sẽ sử dụng ngôn ngữ Python cho dự án
+này.
 
 == Mô hình ngôn ngữ lớn (LLM)
 Vì Langchain cho phép dễ dàng thay đổi linh hoạt nhiều mô hình ngôn ngữ mà không
@@ -38,3 +41,23 @@ của Python, thư viện này cho phép nhà phát triển nhanh chóng viết 
 hướng tiếp cận đơn giản và hướng dẫn sử dụng kĩ, cùng với đó là hệ sinh thái tốt
 và hỗ trợ lập trình async qua uvicorn server async (ASGI server) hoặc
 multi-processing (uvicorn workers).
+
+== OCR
+Vì ta làm việc với tệp dữ liệu dạng pdf, nên sẽ cần thư viện để trích xuất văn
+bản từ tệp pdf hoặc dùng công nghệ OCR để đưa những tệp pdf chứa hình ảnh về
+dạng văn bản.
+
+=== mupdf
+
+Có hai thư viện được sử dụng rộng rãi cho loại dữ liệu pdf là mupdf và poppler.
+Tôi quyết định lựa chọn mupdf vì đây là thư viện hiện đại và có tốc độ xử lý
+nhanh hơn poppler.
+
+mupdf còn có thư viện bindings qua python là pymupdf, rất thuận tiện cho tác vụ
+xử lý file pdf.
+
+=== tesseract
+
+Là công cụ OCR nhỏ gọn có thể chạy trong local, vì dữ liệu đầu vào là một mẫu
+pdf khá nhỏ (1-2 trang), và mẫu pdf là dữ liệu theo thể thức chứ không phải chữ
+viết tay nên không đòi hỏi dịch vụ OCR mạnh hơn của bên thứ ba.
