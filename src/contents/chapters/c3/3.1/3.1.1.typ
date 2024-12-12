@@ -1,6 +1,13 @@
 = Prompt
 
 == Prompt cơ bản
+Prompt sẽ bảo gồm:
+- Một lời nhắn của hệ thống (system message), để tạo cho mô hình
+ngôn ngữ hiểu được ngữ cảnh của công việc.
+- Những gợi ý (tips) thông qua lời nhắn của con người (human message), để chỉ dẫn,
+  đưa ra gợi ý cho model trả lời phụ hợp với ý của người sử dụng hơn.
+- Một lời nhắn đầu vào của con người, chúng ta sẽ để trống tin nhắn này và truyền
+  vào khi gọi chain (xem phần Extraction chain).
 
 ```python
 from langchain_core.messages import SystemMessage

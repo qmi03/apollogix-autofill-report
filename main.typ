@@ -16,7 +16,7 @@
   underline(it)
 }
 
-#set heading(numbering: "1.1.1.a")
+#set heading(numbering: "I.1.1.1.a")
 #show heading: it => {
   it
   v(.5em)

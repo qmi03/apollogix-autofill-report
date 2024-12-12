@@ -2,7 +2,7 @@
 Vì những nhược điểm nêu ra ở hướng tiếp cận trên. Tôi đã lựa chọn phương pháp
 học tăng cường.
 
-*Học tăng cường là gì?*
+== Học tăng cường là gì?
 
 Là phương pháp dựa trên mô hình đã được huấn luyện sẵn (các mô hình ngôn ngữ lớn
 như GPT-4o, Llama3, Mistral,...).
@@ -21,20 +21,6 @@ tạo được một mô hình có khả năng trò chuyện với người dùn
       Human: Tôi muốn đặt câu hỏi về học tăng cường. \
     ], [Học tăng cường là phương pháp dựa trên mô hình đã được huấn luyện sẵn... ],
   ), caption: [Minh họa về cách chatbot hoạt động dựa trên mô hình ngôn ngữ],
-)
-
-*Chức năng gọi hàm/công cụ (function/tool calling) của mô hình ngôn ngữ lớn*
-
-Mô hình ngôn ngữ ở dạng thuần túy nhất không có khả năng lấy được thông tin ở
-thời gian thực. Vì vậy ta không thể nào đặt câu hỏi mong chờ kết quả của thời
-gian thực. Các nhà cung cấp mô hình hiện nay đã cung cấp thêm cho mô hình khả
-năng gọi hàm. Gọi hàm gồm các bước trừu tượng như sau:
-+ Trích đầu vào cho một hàm
-+ Gọi hàm
-+ Sinh ra câu trả lời cho người dùng dựa trên đầu ra của hàm
-(Theo dõi hình minh họa ở dưới)
-#figure(
-  image("/static/c2/function_call.png"), caption: [Minh họa về cách gọi hàm của mô hình ngôn ngữ lớn],
 )
 
 *Vì sao chọn phương pháp này phù hợp hơn để giải quyết bài toán thay cho phương
@@ -56,3 +42,29 @@ Nhược điểm:
   có thể được bỏ qua nhờ các kĩ thuật:
   - Việc viết lời gợi (prompting) hay hơn
   - Viết lời gợi kèm theo ví dụ (khoảng 2-5 ví dụ): Few-shot Prompting
+- Một số mô hình được huấn luyện đặc biệt cho tác vụ gọi hàm (xem bên dưới)
+
+== Chức năng gọi hàm/công cụ (function/tool calling) của mô hình ngôn ngữ lớn
+
+Mô hình ngôn ngữ ở dạng thuần túy nhất không có khả năng lấy được thông tin ở
+thời gian thực. Vì vậy ta không thể nào đặt câu hỏi mong chờ kết quả của thời
+gian thực. Các nhà cung cấp mô hình hiện nay đã cung cấp thêm cho mô hình khả
+năng gọi hàm. Gọi hàm gồm các bước trừu tượng như sau:
++ Trích đầu vào cho một hàm
++ Gọi hàm
++ Sinh ra câu trả lời cho người dùng dựa trên đầu ra của hàm
+(Theo dõi hình minh họa ở dưới)
+
+*Ứng dụng của function calling để giải quyết bài toán*
+
+Dưới một góc độ khác, nếu ta bỏ qua bước trừu tượng 2 và 3, thì khả năng
+function calling của mô hình ngôn ngữ đơn giản là trích xuất tham số từ cuộc trò
+chuyện để sử dụng làm đầu vào cho các hàm.
+
+Ta có thể lợi dụng chuyện này, định nghĩa tham số đầu vào cho một hàm giả. Yêu
+cầu mô hình trích xuất tham số cho hàm giả đó, kết quả thu được sẽ là một mô
+hình có khả năng trích xuất văn bản.
+
+#figure(
+  image("/static/c2/function_call.png"), caption: [Minh họa về cách gọi hàm của mô hình ngôn ngữ lớn],
+)
