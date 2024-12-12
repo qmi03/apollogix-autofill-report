@@ -1,4 +1,4 @@
-= Hướng tiếp cận
+= Phân tích các hướng tiếp cận
 == Biến dữ liệu chưa có cấu trúc về dữ liệu có cấu trúc
 Đề xuẫt hai phương pháp có thể sử dụng:
 + Huấn luyện mô hình:

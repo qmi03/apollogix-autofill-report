@@ -44,6 +44,7 @@ Nhược điểm:
 - Độ chính xác hội tụ sớm sau một thời gian ngắn sử dụng: Vì chúng ta sẽ không
   huấn luyện mô hình, nên cũng không thể tăng độ chính xác theo thời gian khi kích
   thước bộ dữ liệu tăng lên.
+- Phụ thuộc lớn vào khả năng viết prompt _hay_.
 Ưu điểm:
 - Không cần nghĩ đến việc huấn luyện: RAG sử dụng các mô hình ngôn ngữ lớn (LLMs)
   đã được huấn luyện trên kho dữ liệu khổng lồ, không yêu cầu một tập dữ liệu gắn
